@@ -110,7 +110,7 @@ with tab_input:
     valid_subject_names = [s for s in subjects_df["과목"].astype(str).tolist() if s.strip()]
     weak_subjects = st.multiselect("특히 보완이 필요한 과목을 선택하세요", options=valid_subject_names)
 
-    st.subheader("요일별 공부 가능 시간대 (When2meet 스타일)")
+    st.subheader("요일별 공부 가능 시간대")
     st.caption("체크된 칸이 공부 가능한 시간 슬롯입니다.")
     with st.form("availability_form", clear_on_submit=False):
         avail_df_tmp = st.data_editor(
